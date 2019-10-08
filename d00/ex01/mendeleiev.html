@@ -9,24 +9,102 @@
 				text-align: left;
 			}
 			td{
-				font-size: 50%;
+				font-size: 75%;
+				color:black;
 			}
-			td, tr, table{
-				background-color: red;
-				color: black;
-				border :1px solid white;
+			th{
+				font-size: 150%;
 			}
 			table{
+				color:black;
 				border-collapse: collapse;
+				width: 100%;
+				height: 100%;
+			}
+			body{
+				background-image: url(https://wallpaperplay.com/walls/full/f/d/9/177292.jpg);
+				background-repeat: no-repeat;
+				background-attachment: fixed;
+				background-size: cover;
+			}
+			.Non_metal{
+				background-color: gray;
+				border-right: 1px solid black;
+				border-left: 1px solid black;
+			}
+			.Alkali{
+				background-color: orange;
+				border-right: 1px solid black;
+				border-left: 1px solid black;
+			}
+			.Alkaline{
+				background-color: red;
+				border-right: 1px solid black;
+				border-left: 1px solid black;
+			}
+			.Transition{
+				background-color: yellow;
+				border-right: 1px solid black;
+				border-left: 1px solid black;
+			}
+			.Metal{
+				background-color: green;
+				border-right: 1px solid black;
+				border-left: 1px solid black;
+			}
+			.Metalloid{
+				background-color: lightgreen;
+				border-right: 1px solid black;
+				border-left: 1px solid black;
+			}
+			.Halogen{
+				background-color: turquoise;
+				border-right: 1px solid black;
+				border-left: 1px solid black;
+			}
+			.Noble_gas{
+				background-color: #338AFF;
+				border-right: 1px solid black;
+				border-left: 1px solid black;
+			}
+			.Lanthanide{
+				background-color: blueviolet;
+				border-right: 1px solid black;
+				border-left: 1px solid black;
+			}
+			.Actinide{
+				background-color: pink;
+				border-right: 1px solid black;
+				border-left: 1px solid black;
+			}
+			.top_right{
+				text-align: right;
+				border-right: 1px solid black;
+				border-left: 1px solid black;
+			}
+			h1{
+				color: aqua;
+				max-width: 400px;
+				text-align: center;
+				background-image: url(https://c4.wallpaperflare.com/wallpaper/371/73/320/tied-kolorz-blue-pink-colors-purple-teal-warm-hd-constellation-illustration-wallpaper-f48fae6e3aae10d0ad5c5122c1c5362f.jpg);
+				background-repeat: no-repeat;
+				background-attachment: fixed;
+				background-size: cover;
+			}
+			.border_top{
+				border-top: 1px solid black;
+			}
+			.border_bottom{
+				border-bottom: 1px solid black;
 			}
 		</style>
 	</head>
-	<body bgcolor="magenta">
-		<table style="width: 100%">
-			<!-- <div class="row_1sym"> -->
+	<body>
+		<h1><p align="center">Mendeleïev Periodic Table</p></h1>
+		<table contenteditable="true">
 				<!-- row1 -->
-				<tr>
-					<td>1.0079</td>
+				<tr class="top_right">
+					<td class="Non_metal border_top">1.0079</td>
 					<td></td>
 					<td></td>
 					<td></td>
@@ -43,11 +121,11 @@
 					<td></td>
 					<td></td>
 					<td></td>
-					<td>4.0026</td>
+					<td class="Noble_gas border_top">4.0026</td>
 				</tr>
 				</div>
 				<tr>
-					<th>H</th>
+					<th class="Non_metal">H</th>
 					<th></th>
 					<th></th>
 					<th></th>
@@ -64,10 +142,10 @@
 					<th></th>
 					<th></th>
 					<th></th>
-					<th>He</th>
+					<th class="Noble_gas">He</th>
 				</tr>
 				<tr>
-					<td>1</td>
+					<td class="Non_metal border_bottom">1</td>
 					<td></td>
 					<td></td>
 					<td></td>
@@ -84,12 +162,12 @@
 					<td></td>
 					<td></td>
 					<td></td>
-					<td>2</td>
+					<td class="Noble_gas border_bottom">2</td>
 				</tr>
 				<!-- row2 -->
-				<tr>
-					<td>6.941</td>
-					<td>9.0122</td>
+				<tr class="top_right">
+					<td class="Alkali border_top">6.941</td>
+					<td class="Alkaline border_top">9.0122</td>
 					<td></td>
 					<td></td>
 					<td></td>
@@ -100,16 +178,16 @@
 					<td></td>
 					<td></td>
 					<td></td>
-					<td>10.811</td>
-					<td>12.011</td>
-					<td>14.007</td>
-					<td>15.999</td>
-					<td>18.998</td>
-					<td>20.1797</td>
+					<td class="Metalloid border_top">10.811</td>
+					<td class="Non_metal border_top">12.011</td>
+					<td class="Non_metal border_top">14.007</td>
+					<td class="Non_metal border_top">15.999</td>
+					<td class="Halogen border_top">18.998</td>
+					<td class="Noble_gas border_top">20.1797</td>
 				</tr>
 				<tr>
-					<th>Li</th>
-					<th>Be</th>
+					<th class="Alkali">Li</th>
+					<th class="Alkaline">Be</th>
 					<th></th>
 					<th></th>
 					<th></th>
@@ -120,16 +198,16 @@
 					<th></th>
 					<th></th>
 					<th></th>
-					<th>B</th>
-					<th>C</th>
-					<th>N</th>
-					<th>O</th>
-					<th>F</th>
-					<th>Ne</th>
+					<th class="Metalloid">B</th>
+					<th class="Non_metal">C</th>
+					<th class="Non_metal">N</th>
+					<th class="Non_metal">O</th>
+					<th class="Halogen">F</th>
+					<th class="Noble_gas">Ne</th>
 				</tr>
 				<tr>
-					<td>3</td>
-					<td>4</td>
+					<td class="Alkali border_bottom">3</td>
+					<td class="Alkaline border_bottom">4</td>
 					<td></td>
 					<td></td>
 					<td></td>
@@ -140,17 +218,17 @@
 					<td></td>
 					<td></td>
 					<td></td>
-					<td>5</td>
-					<td>6</td>
-					<td>7</td>
-					<td>8</td>
-					<td>9</td>
-					<td>10</td>
+					<td class="Metalloid border_bottom">5</td>
+					<td class="Non_metal border_bottom">6</td>
+					<td class="Non_metal border_bottom">7</td>
+					<td class="Non_metal border_bottom">8</td>
+					<td class="Halogen border_bottom">9</td>
+					<td class="Noble_gas border_bottom">10</td>
 					</tr>
 				<!-- row3 -->
-				<tr>
-					<td>22.989</td>
-					<td>24.305</td>
+				<tr class="top_right">
+					<td class="Alkali border_top">22.989</td>
+					<td class="Alkaline border_top">24.305</td>
 					<td></td>
 					<td></td>
 					<td></td>
@@ -161,16 +239,16 @@
 					<td></td>
 					<td></td>
 					<td></td>
-					<td>26.981</td>
-					<td>28.085</td>
-					<td>30.974</td>
-					<td>32.066</td>
-					<td>35.453</td>
-					<td>39.948</td>
+					<td class="Metal border_top">26.981</td>
+					<td class="Metalloid border_top">28.085</td>
+					<td class="Non_metal border_top">30.974</td>
+					<td class="Non_metal border_top">32.066</td>
+					<td class="Halogen border_top">35.453</td>
+					<td class="Noble_gas border_top">39.948</td>
 				</tr>
 				<tr>
-					<th>Na</th>
-					<th>Mg</th>
+					<th class="Alkali">Na</th>
+					<th class="Alkaline">Mg</th>
 					<th></th>
 					<th></th>
 					<th></th>
@@ -181,16 +259,16 @@
 					<th></th>
 					<th></th>
 					<th></th>
-					<th>Al</th>
-					<th>Si</th>
-					<th>P</th>
-					<th>S</th>
-					<th>Cl</th>
-					<th>Ar</th>
+					<th class="Metal">Al</th>
+					<th class="Metalloid">Si</th>
+					<th class="Non_metal">P</th>
+					<th class="Non_metal">S</th>
+					<th class="Halogen">Cl</th>
+					<th class="Noble_gas">Ar</th>
 				</tr>
 				<tr>
-					<td>11</td>
-					<td>12</td>
+					<td class="Alkali border_bottom">11</td>
+					<td class="Alkaline border_bottom">12</td>
 					<td></td>
 					<td></td>
 					<td></td>
@@ -201,256 +279,256 @@
 					<td></td>
 					<td></td>
 					<td></td>
-					<td>13</td>
-					<td>14</td>
-					<td>15</td>
-					<td>16</td>
-					<td>17</td>
-					<td>18</td>
+					<td class="Metal border_bottom">13</td>
+					<td class="Metalloid border_bottom">14</td>
+					<td class="Non_metal border_bottom">15</td>
+					<td class="Non_metal border_bottom">16</td>
+					<td class="Halogen border_bottom">17</td>
+					<td class="Noble_gas border_bottom">18</td>
 				</tr>
 				<!-- row4 -->
-				<tr>
-					<td>39.098</td>
-					<td>40.078</td>
-					<td>44.955</td>
-					<td>47.867</td>
-					<td>50.9415</td>
-					<td>51.9961</td>
-					<td>54.938</td>
-					<td>55.845</td>
-					<td>58.933</td>
-					<td>58.6934</td>
-					<td>63.546</td>
-					<td>65.38</td>
-					<td>69.273</td>
-					<td>72.63</td>
-					<td>74.921</td>
-					<td>78.971</td>
-					<td>79.904</td>
-					<td>83.798</td>
+				<tr class="top_right">
+					<td class="Alkali border_top">39.098</td>
+					<td class="Alkaline border_top">40.078</td>
+					<td class="Transition border_top">44.955</td>
+					<td class="Transition border_top">47.867</td>
+					<td class="Transition border_top">50.9415</td>
+					<td class="Transition border_top">51.9961</td>
+					<td class="Transition border_top">54.938</td>
+					<td class="Transition border_top">55.845</td>
+					<td class="Transition border_top">58.933</td>
+					<td class="Transition border_top">58.6934</td>
+					<td class="Transition border_top">63.546</td>
+					<td class="Transition border_top">65.38</td>
+					<td class="Metal border_top">69.273</td>
+					<td class="Metalloid border_top">72.63</td>
+					<td class="Metalloid border_top">74.921</td>
+					<td class="Non_metal border_top">78.971</td>
+					<td class="Halogen border_top">79.904</td>
+					<td class="Noble_gas border_top">83.798</td>
 				</tr>
 				<tr>
-					<th>K</th>
-					<th>Ca</th>
-					<th>Sc</th>
-					<th>Ti</th>
-					<th>V</th>
-					<th>Cr</th>
-					<th>Mn</th>
-					<th>Fe</th>
-					<th>Co</th>
-					<th>Ni</th>
-					<th>Cu</th>
-					<th>Zn</th>
-					<th>Ga</th>
-					<th>Ge</th>
-					<th>As</th>
-					<th>Se</th>
-					<th>Br</th>
-					<th>Kr</th>
+					<th class="Alkali">K</th>
+					<th class="Alkaline">Ca</th>
+					<th class="Transition">Sc</th>
+					<th class="Transition">Ti</th>
+					<th class="Transition">V</th>
+					<th class="Transition">Cr</th>
+					<th class="Transition">Mn</th>
+					<th class="Transition">Fe</th>
+					<th class="Transition">Co</th>
+					<th class="Transition">Ni</th>
+					<th class="Transition">Cu</th>
+					<th class="Transition">Zn</th>
+					<th class="Metal">Ga</th>
+					<th class="Metalloid">Ge</th>
+					<th class="Metalloid">As</th>
+					<th class="Non_metal">Se</th>
+					<th class="Halogen">Br</th>
+					<th class="Noble_gas">Kr</th>
 				</tr>
 				<tr>
-					<td>19</td>
-					<td>20</td>
-					<td>21</td>
-					<td>22</td>
-					<td>23</td>
-					<td>24</td>
-					<td>25</td>
-					<td>26</td>
-					<td>27</td>
-					<td>28</td>
-					<td>29</td>
-					<td>30</td>
-					<td>31</td>
-					<td>32</td>
-					<td>33</td>
-					<td>34</td>
-					<td>35</td>
-					<td>36</td>
+					<td class="Alkali border_bottom">19</td>
+					<td class="Alkaline border_bottom">20</td>
+					<td class="Transition border_bottom">21</td>
+					<td class="Transition border_bottom">22</td>
+					<td class="Transition border_bottom">23</td>
+					<td class="Transition border_bottom">24</td>
+					<td class="Transition border_bottom">25</td>
+					<td class="Transition border_bottom">26</td>
+					<td class="Transition border_bottom">27</td>
+					<td class="Transition border_bottom">28</td>
+					<td class="Transition border_bottom">29</td>
+					<td class="Transition border_bottom">30</td>
+					<td class="Metal border_bottom">31</td>
+					<td class="Metalloid border_bottom">32</td>
+					<td class="Metalloid border_bottom">33</td>
+					<td class="Non_metal border_bottom">34</td>
+					<td class="Halogen border_bottom">35</td>
+					<td class="Noble_gas border_bottom">36</td>
 				</tr>
 				<!-- row5 -->
-				<tr>
-					<td>85.467</td>
-					<td>87.62</td>
-					<td>88.9058</td>
-					<td>91.224</td>
-					<td>92.9063</td>
-					<td>95.95</td>
-					<td>(98)</td>
-					<td>101.07</td>
-					<td>102.90</td>
-					<td>106.42</td>
-					<td>107.8682</td>
-					<td>112.414</td>
-					<td>114.818</td>
-					<td>118.710</td>
-					<td>121.760</td>
-					<td>127.60</td>
-					<td>126.90</td>
-					<td>131.293</td>
+				<tr class="top_right">
+					<td class="Alkali border_top">85.467</td>
+					<td class="Alkaline border_top">87.62</td>
+					<td class="Transition border_top">88.9058</td>
+					<td class="Transition border_top">91.224</td>
+					<td class="Transition border_top">92.9063</td>
+					<td class="Transition border_top">95.95</td>
+					<td class="Transition border_top">(98)</td>
+					<td class="Transition border_top">101.07</td>
+					<td class="Transition border_top">102.90</td>
+					<td class="Transition border_top">106.42</td>
+					<td class="Transition border_top">107.8682</td>
+					<td class="Transition border_top">112.414</td>
+					<td class="Metal border_top">114.818</td>
+					<td class="Metal border_top">118.710</td>
+					<td class="Metalloid border_top">121.760</td>
+					<td class="Metalloid border_top">127.60</td>
+					<td class="Halogen border_top">126.90</td>
+					<td class="Noble_gas border_top">131.293</td>
 				</tr>
 				<tr>
-					<th>Rb</th>
-					<th>Sr</th>
-					<th>Y</th>
-					<th>Zr</th>
-					<th>Nb</th>
-					<th>Mo</th>
-					<th>Tc</th>
-					<th>Ru</th>
-					<th>Rh</th>
-					<th>Pd</th>
-					<th>Ag</th>
-					<th>Cd</th>
-					<th>In</th>
-					<th>Sn</th>
-					<th>Sb</th>
-					<th>Te</th>
-					<th>I</th>
-					<th>Xe</th>
+					<th class="Alkali">Rb</th>
+					<th class="Alkaline">Sr</th>
+					<th class="Transition">Y</th>
+					<th class="Transition">Zr</th>
+					<th class="Transition">Nb</th>
+					<th class="Transition">Mo</th>
+					<th class="Transition">Tc</th>
+					<th class="Transition">Ru</th>
+					<th class="Transition">Rh</th>
+					<th class="Transition">Pd</th>
+					<th class="Transition">Ag</th>
+					<th class="Transition">Cd</th>
+					<th class="Metal">In</th>
+					<th class="Metal">Sn</th>
+					<th class="Metalloid">Sb</th>
+					<th class="Metalloid">Te</th>
+					<th class="Halogen">I</th>
+					<th class="Noble_gas">Xe</th>
 				</tr>
 				<tr>
-					<td>37</td>
-					<td>38</td>
-					<td>39</td>
-					<td>40</td>
-					<td>41</td>
-					<td>42</td>
-					<td>43</td>
-					<td>44</td>
-					<td>45</td>
-					<td>46</td>
-					<td>47</td>
-					<td>48</td>
-					<td>49</td>
-					<td>50</td>
-					<td>51</td>
-					<td>52</td>
-					<td>53</td>
-					<td>54</td>
+					<td class="Alkali border_bottom">37</td>
+					<td class="Alkaline border_bottom">38</td>
+					<td class="Transition border_bottom">39</td>
+					<td class="Transition border_bottom">40</td>
+					<td class="Transition border_bottom">41</td>
+					<td class="Transition border_bottom">42</td>
+					<td class="Transition border_bottom">43</td>
+					<td class="Transition border_bottom">44</td>
+					<td class="Transition border_bottom">45</td>
+					<td class="Transition border_bottom">46</td>
+					<td class="Transition border_bottom">47</td>
+					<td class="Transition border_bottom">48</td>
+					<td class="Metal border_bottom">49</td>
+					<td class="Metal border_bottom">50</td>
+					<td class="Metalloid border_bottom">51</td>
+					<td class="Metalloid border_bottom">52</td>
+					<td class="Halogen border_bottom">53</td>
+					<td class="Noble_gas border_bottom">54</td>
 				</tr>
 				<!-- row6 -->
-				<tr>
-					<td>132.905</td>
-					<td>137.327</td>
-					<td></td>
-					<td>178.49</td>
-					<td>180.94</td>
-					<td>183.84</td>
-					<td>186.207</td>
-					<td>190.23</td>
-					<td>192.217</td>
-					<td>195.084</td>
-					<td>196.96</td>
-					<td>200.59</td>
-					<td>204.38</td>
-					<td>207.2</td>
-					<td>208.98</td>
-					<td>(209)</td>
-					<td>(210)</td>
-					<td>(222)</td>
+				<tr class="top_right">
+					<td class="Alkali border_top">132.905</td>
+					<td class="Alkaline border_top">137.327</td>
+					<td class="Lanthanide border_top"></td>
+					<td class="Transition border_top">178.49</td>
+					<td class="Transition border_top">180.94</td>
+					<td class="Transition border_top">183.84</td>
+					<td class="Transition border_top">186.207</td>
+					<td class="Transition border_top">190.23</td>
+					<td class="Transition border_top">192.217</td>
+					<td class="Transition border_top">195.084</td>
+					<td class="Transition border_top">196.96</td>
+					<td class="Transition border_top">200.59</td>
+					<td class="Metal border_top">204.38</td>
+					<td class="Metal border_top">207.2</td>
+					<td class="Metal border_top">208.98</td>
+					<td class="Metalloid border_top">(209)</td>
+					<td class="Halogen border_top">(210)</td>
+					<td class="Noble_gas border_top">(222)</td>
 				</tr>
 				<tr>
-					<th>Cs</th>
-					<th>Ba</th>
-					<th>57-71*</th>
-					<th>Hf</th>
-					<th>Ta</th>
-					<th>W</th>
-					<th>Re</th>
-					<th>Os</th>
-					<th>Ir</th>
-					<th>Pt</th>
-					<th>Au</th>
-					<th>Hg</th>
-					<th>Tl</th>
-					<th>Pb</th>
-					<th>Bi</th>
-					<th>Po</th>
-					<th>At</th>
-					<th>Rn</th>
+					<th class="Alkali">Cs</th>
+					<th class="Alkaline">Ba</th>
+					<th class="Lanthanide">57-71*</th>
+					<th class="Transition">Hf</th>
+					<th class="Transition">Ta</th>
+					<th class="Transition">W</th>
+					<th class="Transition">Re</th>
+					<th class="Transition">Os</th>
+					<th class="Transition">Ir</th>
+					<th class="Transition">Pt</th>
+					<th class="Transition">Au</th>
+					<th class="Transition">Hg</th>
+					<th class="Metal">Tl</th>
+					<th class="Metal">Pb</th>
+					<th class="Metal">Bi</th>
+					<th class="Metalloid">Po</th>
+					<th class="Halogen">At</th>
+					<th class="Noble_gas">Rn</th>
 				</tr>
 				<tr>
-					<td>55</td>
-					<td>56</td>
-					<td></td>
-					<td>72</td>
-					<td>73</td>
-					<td>74</td>
-					<td>75</td>
-					<td>76</td>
-					<td>77</td>
-					<td>78</td>
-					<td>79</td>
-					<td>80</td>
-					<td>81</td>
-					<td>82</td>
-					<td>83</td>
-					<td>84</td>
-					<td>85</td>
-					<td>86</td>
+					<td class="Alkali">55</td>
+					<td class="Alkaline">56</td>
+					<td class="Lanthanide"></td>
+					<td class="Transition">72</td>
+					<td class="Transition">73</td>
+					<td class="Transition">74</td>
+					<td class="Transition">75</td>
+					<td class="Transition">76</td>
+					<td class="Transition">77</td>
+					<td class="Transition">78</td>
+					<td class="Transition">79</td>
+					<td class="Transition">80</td>
+					<td class="Metal">81</td>
+					<td class="Metal">82</td>
+					<td class="Metal">83</td>
+					<td class="Metalloid">84</td>
+					<td class="Halogen">85</td>
+					<td class="Noble_gas">86</td>
 				</tr>
 				<!-- row7 -->
-				<tr>
-					<td>(223)</td>
-					<td>(226)</td>
-					<td></td>
-					<td>(267)</td>
-					<td>(268)</td>
-					<td>(271)</td>
-					<td>(272)</td>
-					<td>(270)</td>
-					<td>(276)</td>
-					<td>(281)</td>
-					<td>(280)</td>
-					<td>(285)</td>
-					<td>(284)</td>
-					<td>(289)</td>
-					<td>(288)</td>
-					<td>(293)</td>
-					<td>(UNKNOWN)</td>
-					<td>(UNKNOWN)</td>
+				<tr class="top_right">
+					<td class=" Alkali border_top">(223)</td>
+					<td class="Alkaline border_top">(226)</td>
+					<td class="Actinide border_top"></td>
+					<td class="Transition border_top">(267)</td>
+					<td class="Transition border_top">(268)</td>
+					<td class="Transition border_top">(271)</td>
+					<td class="Transition border_top">(272)</td>
+					<td class="Transition border_top">(270)</td>
+					<td class="Transition border_top">(276)</td>
+					<td class="Transition border_top">(281)</td>
+					<td class="Transition border_top">(280)</td>
+					<td class="Transition border_top">(285)</td>
+					<td class="Metal border_top">(284)</td>
+					<td class="Metal border_top">(289)</td>
+					<td class="Metal border_top">(288)</td>
+					<td class="Metal border_top">(293)</td>
+					<td class="Halogen border_top">(UNKNOWN)</td>
+					<td class="Noble_gas border_top">(UNKNOWN)</td>
 				</tr>
 				<tr>
-					<th>Fr</th>
-					<th>Ra</th>
-					<th>89-103**</th>
-					<th>Rf</th>
-					<th>Db</th>
-					<th>Sg</th>
-					<th>Bh</th>
-					<th>Hs</th>
-					<th>Mt</th>
-					<th>Ds</th>
-					<th>Rg</th>
-					<th>Cn</th>
-					<th>Uut</th>
-					<th>Fl</th>
-					<th>Uup</th>
-					<th>Lv</th>
-					<th>Ts</th>
-					<th>Og</th>
+					<th class="Alkali">Fr</th>
+					<th class="Alkaline">Ra</th>
+					<th class="Actinide">89-103**</th>
+					<th class="Transition">Rf</th>
+					<th class="Transition">Db</th>
+					<th class="Transition">Sg</th>
+					<th class="Transition">Bh</th>
+					<th class="Transition">Hs</th>
+					<th class="Transition">Mt</th>
+					<th class="Transition">Ds</th>
+					<th class="Transition">Rg</th>
+					<th class="Transition">Cn</th>
+					<th class="Metal">Uut</th>
+					<th class="Metal">Fl</th>
+					<th class="Metal">Uup</th>
+					<th class="Metal">Lv</th>
+					<th class="Halogen">Ts</th>
+					<th class="Noble_gas">Og</th>
 				</tr>
 				<tr>
-					<td>87</td>
-					<td>88</td>
-					<td></td>
-					<td>104</td>
-					<td>105</td>
-					<td>106</td>
-					<td>107</td>
-					<td>108</td>
-					<td>109</td>
-					<td>110</td>
-					<td>111</td>
-					<td>112</td>
-					<td>113</td>
-					<td>114</td>
-					<td>115</td>
-					<td>116</td>
-					<td>117</td>
-					<td>118</td>
+					<td class="Alkali border_bottom">87</td>
+					<td class="Alkaline border_bottom">88</td>
+					<td class="Actinide border_bottom"></td>
+					<td class="Transition border_bottom">104</td>
+					<td class="Transition border_bottom">105</td>
+					<td class="Transition border_bottom">106</td>
+					<td class="Transition border_bottom">107</td>
+					<td class="Transition border_bottom">108</td>
+					<td class="Transition border_bottom">109</td>
+					<td class="Transition border_bottom">110</td>
+					<td class="Transition border_bottom">111</td>
+					<td class="Transition border_bottom">112</td>
+					<td class="Metal border_bottom">113</td>
+					<td class="Metal border_bottom">114</td>
+					<td class="Metal border_bottom">115</td>
+					<td class="Metal border_bottom">116</td>
+					<td class="Halogen border_bottom">117</td>
+					<td class="Noble_gas border_bottom">118</td>
 				</tr>
 				<!-- row8 gap row-->
 				<tr>
@@ -514,126 +592,126 @@
 					<td></td>
 				</tr>
 				<!-- row9 -->
-				<tr>
+				<tr class="top_right">
 					<td></td>
 					<td></td>
 					<td></td>
-					<td>138.90</td>
-					<td>140.116</td>
-					<td>140.90</td>
-					<td>144.242</td>
-					<td>(145)</td>
-					<td>150.36</td>
-					<td>151.964</td>
-					<td>157.25</td>
-					<td>158.92</td>
-					<td>162.500</td>
-					<td>164.93</td>
-					<td>167.259</td>
-					<td>168.93</td>
-					<td>173.054</td>
-					<td>174.9668</td>
+					<td class="Lanthanide border_top">138.90</td>
+					<td class="Lanthanide border_top">140.116</td>
+					<td class="Lanthanide border_top">140.90</td>
+					<td class="Lanthanide border_top">144.242</td>
+					<td class="Lanthanide border_top">(145)</td>
+					<td class="Lanthanide border_top">150.36</td>
+					<td class="Lanthanide border_top">151.964</td>
+					<td class="Lanthanide border_top">157.25</td>
+					<td class="Lanthanide border_top">158.92</td>
+					<td class="Lanthanide border_top">162.500</td>
+					<td class="Lanthanide border_top">164.93</td>
+					<td class="Lanthanide border_top">167.259</td>
+					<td class="Lanthanide border_top">168.93</td>
+					<td class="Lanthanide border_top">173.054</td>
+					<td class="Lanthanide border_top">174.9668</td>
 				</tr>
 				<tr>
 					<th></th>
 					<th></th>
 					<th></th>
-					<th>La</th>
-					<th>Ce</th>
-					<th>Pr</th>
-					<th>Nd</th>
-					<th>Pm</th>
-					<th>Sm</th>
-					<th>Eu</th>
-					<th>Gd</th>
-					<th>Tb</th>
-					<th>Dy</th>
-					<th>Ho</th>
-					<th>Er</th>
-					<th>Tm</th>
-					<th>Yb</th>
-					<th>Lu</th>
+					<th class="Lanthanide">La</th>
+					<th class="Lanthanide">Ce</th>
+					<th class="Lanthanide">Pr</th>
+					<th class="Lanthanide">Nd</th>
+					<th class="Lanthanide">Pm</th>
+					<th class="Lanthanide">Sm</th>
+					<th class="Lanthanide">Eu</th>
+					<th class="Lanthanide">Gd</th>
+					<th class="Lanthanide">Tb</th>
+					<th class="Lanthanide">Dy</th>
+					<th class="Lanthanide">Ho</th>
+					<th class="Lanthanide">Er</th>
+					<th class="Lanthanide">Tm</th>
+					<th class="Lanthanide">Yb</th>
+					<th class="Lanthanide">Lu</th>
 				</tr>
 				<tr>
 					<td></td>
 					<td></td>
 					<td></td>
-					<td>57</td>
-					<td>58</td>
-					<td>59</td>
-					<td>60</td>
-					<td>61</td>
-					<td>62</td>
-					<td>63</td>
-					<td>64</td>
-					<td>65</td>
-					<td>66</td>
-					<td>67</td>
-					<td>68</td>
-					<td>69</td>
-					<td>70</td>
-					<td>71</td>
+					<td class="Lanthanide border_bottom">57</td>
+					<td class="Lanthanide border_bottom">58</td>
+					<td class="Lanthanide border_bottom">59</td>
+					<td class="Lanthanide border_bottom">60</td>
+					<td class="Lanthanide border_bottom">61</td>
+					<td class="Lanthanide border_bottom">62</td>
+					<td class="Lanthanide border_bottom">63</td>
+					<td class="Lanthanide border_bottom">64</td>
+					<td class="Lanthanide border_bottom">65</td>
+					<td class="Lanthanide border_bottom">66</td>
+					<td class="Lanthanide border_bottom">67</td>
+					<td class="Lanthanide border_bottom">68</td>
+					<td class="Lanthanide border_bottom">69</td>
+					<td class="Lanthanide border_bottom">70</td>
+					<td class="Lanthanide border_bottom">71</td>
 				</tr>
 				<!-- row10 -->
-				<tr>
+				<tr class="top_right">
 					<td></td>
 					<td></td>
 					<td></td>
-					<td>(227)</td>
-					<td>232.0377</td>
-					<td>231.03</td>
-					<td>238.02</td>
-					<td>(237)</td>
-					<td>(244)</td>
-					<td>(243)</td>
-					<td>(247)</td>
-					<td>(247)</td>
-					<td>(251)</td>
-					<td>(252)</td>
-					<td>(257)</td>
-					<td>(258)</td>
-					<td>(259)</td>
-					<td>(262)</td>
+					<td class="Actinide">(227)</td>
+					<td class="Actinide">232.0377</td>
+					<td class="Actinide">231.03</td>
+					<td class="Actinide">238.02</td>
+					<td class="Actinide">(237)</td>
+					<td class="Actinide">(244)</td>
+					<td class="Actinide">(243)</td>
+					<td class="Actinide">(247)</td>
+					<td class="Actinide">(247)</td>
+					<td class="Actinide">(251)</td>
+					<td class="Actinide">(252)</td>
+					<td class="Actinide">(257)</td>
+					<td class="Actinide">(258)</td>
+					<td class="Actinide">(259)</td>
+					<td class="Actinide">(262)</td>
 				</tr>
 				<tr>
 					<th></th>
 					<th></th>
 					<th></th>
-					<th>Ac</th>
-					<th>Th</th>
-					<th>Pa</th>
-					<th>U</th>
-					<th>Np</th>
-					<th>Pu</th>
-					<th>Am</th>
-					<th>Cm</th>
-					<th>Bk</th>
-					<th>Cf</th>
-					<th>Es</th>
-					<th>Fm</th>
-					<th>Md</th>
-					<th>No</th>
-					<th>Lr</th>
+					<th class="Actinide">Ac</th>
+					<th class="Actinide">Th</th>
+					<th class="Actinide">Pa</th>
+					<th class="Actinide">U</th>
+					<th class="Actinide">Np</th>
+					<th class="Actinide">Pu</th>
+					<th class="Actinide">Am</th>
+					<th class="Actinide">Cm</th>
+					<th class="Actinide">Bk</th>
+					<th class="Actinide">Cf</th>
+					<th class="Actinide">Es</th>
+					<th class="Actinide">Fm</th>
+					<th class="Actinide">Md</th>
+					<th class="Actinide">No</th>
+					<th class="Actinide">Lr</th>
 				</tr>
 				<tr>
 					<td></td>
 					<td></td>
 					<td></td>
-					<td>89</td>
-					<td>90</td>
-					<td>91</td>
-					<td>92</td>
-					<td>93</td>
-					<td>94</td>
-					<td>95</td>
-					<td>96</td>
-					<td>97</td>
-					<td>98</td>
-					<td>99</td>
-					<td>100</td>
-					<td>101</td>
-					<td>102</td>
-					<td>103</td>
+					<td class="Actinide border_bottom">89</td>
+					<td class="Actinide border_bottom">90</td>
+					<td class="Actinide border_bottom">91</td>
+					<td class="Actinide border_bottom">92</td>
+					<td class="Actinide border_bottom">93</td>
+					<td class="Actinide border_bottom">94</td>
+					<td class="Actinide border_bottom">95</td>
+					<td class="Actinide border_bottom">96</td>
+					<td class="Actinide border_bottom">97</td>
+					<td class="Actinide border_bottom">98</td>
+					<td class="Actinide border_bottom">99</td>
+					<td class="Actinide border_bottom">100</td>
+					<td class="Actinide border_bottom">101</td>
+					<td class="Actinide border_bottom">102</td>
+					<td class="Actinide border_bottom">103</td>
 				</tr>
 			<!-- </div> -->
 		</table>
