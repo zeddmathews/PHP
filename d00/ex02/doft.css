@@ -1,0 +1,68 @@
+body{
+	background-color: #595959;
+}
+.main_rectangle{
+	height: 135px;
+	width: 1420px;
+	border-radius: 15px;
+	background-color: #909090;
+	box-shadow: 10px 10px 10px rgba(0, 0, 0, 1);
+	margin: auto;
+}
+.main_dud{
+	display: flex;
+	align-content: center;
+	justify-content: center;
+	justify-content: space-between;
+}
+.dud1{
+	width: 20px;
+}
+.dud2{
+	width: 140px;
+}
+.dud3{
+	width: 1020px;
+}
+.dud4{
+	width: 140px;
+}
+.dud5{
+	width: 250px;
+}
+.three{
+	display: flex;
+	align-content: center;
+	justify-content: center;
+	justify-content: space-between;
+}
+.yes{
+	width:250px;
+}
+.left_rectangle{
+	height: 425px;
+	width: 140px;
+	background-color: #909090;
+	border-radius: 20px;
+	box-shadow: 10px 10px 10px rgba(0, 0, 0, 1);
+}
+.central_rectangle{
+	height: 580px;
+	width: 1020px;
+	border-radius: 15px;
+	background-color: #909090;
+	box-shadow: 10px 10px 10px black;
+}
+.right_rectangle{
+	height: 425px;
+	width: 140px;
+	border-radius: 15px;
+	background-color: #909090;
+	box-shadow: 10px 10px 10px black;
+}
+#doft{
+	height: 115px;
+	width: 420px;
+	margin-top: 12.5px;
+	margin-left: auto;
+}
