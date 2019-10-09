@@ -1,0 +1,93 @@
+.row_1sym{
+	text-align: left;
+}
+td{
+	font-size: 1vw;
+	color:black;
+}
+th{
+	font-size: 2vw;
+}
+table{
+	color:black;
+	border-collapse: collapse;
+	width: 100%;
+	height: 100%;
+}
+body{
+	background-image: url(https://wallpaperplay.com/walls/full/f/d/9/177292.jpg);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	width: 100%;
+}
+.Non_metal{
+	background-color: gray;
+	border-right: 1px solid black;
+	border-left: 1px solid black;
+}
+.Alkali{
+	background-color: orange;
+	border-right: 1px solid black;
+	border-left: 1px solid black;
+}
+.Alkaline{
+	background-color: red;
+	border-right: 1px solid black;
+	border-left: 1px solid black;
+}
+.Transition{
+	background-color: yellow;
+	border-right: 1px solid black;
+	border-left: 1px solid black;
+}
+.Metal{
+	background-color: green;
+	border-right: 1px solid black;
+	border-left: 1px solid black;
+}
+.Metalloid{
+	background-color: lightgreen;
+	border-right: 1px solid black;
+	border-left: 1px solid black;
+}
+.Halogen{
+	background-color: turquoise;
+	border-right: 1px solid black;
+	border-left: 1px solid black;
+}
+.Noble_gas{
+	background-color: #338AFF;
+	border-right: 1px solid black;
+	border-left: 1px solid black;
+}
+.Lanthanide{
+	background-color: blueviolet;
+	border-right: 1px solid black;
+	border-left: 1px solid black;
+}
+.Actinide{
+	background-color: pink;
+	border-right: 1px solid black;
+	border-left: 1px solid black;
+}
+.top_right{
+	text-align: right;
+	border-right: 1px solid black;
+	border-left: 1px solid black;
+}
+h1{
+	color: aqua;
+	max-width: 100%;
+	text-align: center;
+	background-image: url(https://c4.wallpaperflare.com/wallpaper/371/73/320/tied-kolorz-blue-pink-colors-purple-teal-warm-hd-constellation-illustration-wallpaper-f48fae6e3aae10d0ad5c5122c1c5362f.jpg);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+}
+.border_top{
+	border-top: 1px solid black;
+}
+.border_bottom{
+	border-bottom: 1px solid black;
+}
