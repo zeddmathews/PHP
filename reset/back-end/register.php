@@ -1,5 +1,5 @@
 <?php
-	include('setup.php');
+	include('insert_data.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -13,7 +13,7 @@
 </head>
 
 <body>
-	<form action = "../config/setup.php" method = "POST">
+	<form action = "../config/insert_data.php" method = "POST">
 		<label>Name</label>
 		<input type="text" name="firstname" required>
 
@@ -35,12 +35,12 @@
 		<br>
 
 		<label>Password</label>
-		<input type="password" name="password" required>
+		<input type="password" name="password_1" required>
 
 		<br>
 
 		<label>Confirm password</label>
-		<input type="password" required>
+		<input type="password" name="password_2" required>
 
 		<br>
 		
@@ -49,7 +49,7 @@
 		<br>
 
 		<label>Already have an account?</label>
-		<button type="button"><a href="../back-end/home.html">Login</a></button>
+		<button type="button"><a href="./home.html">Login</a></button>
 		<button type="button"><a href="./reset_account.html">Forgotten password?</a></button>
 	</form>
 </body>
