@@ -12,7 +12,8 @@
 		else {
 			die ("$_POST[email] is not a valid email address");
 		}
-		$sql = "INSERT INTO MyGuests(firstname, lastname, username, email, password) VALUES ('{$_POST[firstname]}', '{$_POST[lastname]}', '{$_POST[username]}', '{$_POST[email]}', '{$_POST[password_1]}')";
+		$encrypt = md5($_POST['password1']);
+		$sql = "INSERT INTO MyGuests(firstname, lastname, username, email, password) VALUES ('{$_POST[firstname]}', '{$_POST[lastname]}', '{$_POST[username]}', '{$_POST[email]}', '{$_POST[password_1]}'), '{$_POST[encrypt]}'";
 		$connection->exec($sql);
 		echo "Register successful";
 	}
