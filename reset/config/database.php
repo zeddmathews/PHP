@@ -1,6 +1,7 @@
 <?php
-	$my_server = "localhost";
-	$my_db = "nub_db";
-	$my_user = "root";
-	$my_pswd = "anything";
+	$DB_NAME = "camagru";
+	$DB_DSN = "mysql:host=localhost";
+	$DB_CON = "mysql:dbname=".$DB_NAME.";host=localhost";
+	$DB_USER = "root";
+	$DB_PASSWORD = "anything";
 ?>

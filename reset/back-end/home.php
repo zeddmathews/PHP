@@ -1,5 +1,5 @@
 <?php
-	include('insert_data.php');
+	include('../config/scan_db.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -13,12 +13,12 @@
 <body>
 	<form>
 		<label>Username/E-mail</label>
-		<input type="text" name="u_name" required>
+		<input type="text" name="login" required>
 
 		<br>
 
 		<label>Password</label>
-		<input type="password" name="psswd" required>
+		<input type="password" name="login_pswd" required>
 
 		<br>
 

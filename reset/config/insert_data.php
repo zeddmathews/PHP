@@ -1,8 +1,11 @@
 <?php
+	ini_set('display_error', 1);
+	ini_set('display_startup_errors', 1);
+	error_reporting(E_ALL);
 	include('database.php');
 	session_start();
 	try {
-		$connection = new PDO("mysql:host=$my_server;dbname=$my_db", $my_user, $my_pswd) or die("Could not connect X.X");
+		$connection = new PDO($DB_CON, $DB_USER, $DB_PASSWORD) or die("Could not connect X.X");
 		$connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 		if ($_POST['password_1'] != $_POST['password_2'])
 			die("Passwords do not match");
@@ -13,12 +16,14 @@
 			die ("$_POST[email] is not a valid email address");
 		}
 		$encrypt = md5($_POST['password1']);
-		$sql = "INSERT INTO MyGuests(firstname, lastname, username, email, password) VALUES ('{$_POST[firstname]}', '{$_POST[lastname]}', '{$_POST[username]}', '{$_POST[email]}', '{$_POST[password_1]}'), '{$_POST[encrypt]}'";
+		$sql = "INSERT INTO users(firstname, lastname, username, email, password, encrypt, verified, notifications) VALUES ('{$_POST[firstname]}', '{$_POST[lastname]}', '{$_POST[username]}', '{$_POST[email]}', '{$_POST[password_1]}', '$encrypt', false, false)";
+		$msg = "Please click the following link to activate your account";
+		mail("{$_POST[email]}", Confirmation, $msg);
 		$connection->exec($sql);
-		echo "Register successful";
+		echo "An email with a verification link has been sent to you.";
 	}
-	catch(PDOException $e) {
+	catch (PDOException $e) {
 		echo $sql . "<br>" . $e->getMessage();
 	}
-	$conn = null;
+	$connection = null;
 ?> 

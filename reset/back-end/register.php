@@ -1,6 +1,3 @@
-<?php
-	include('insert_data.php');
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -30,7 +27,7 @@
 		<br>
 
 		<label>E-mail</label>
-		<input type="text" name="email" required>
+		<input type="email" name="email" required>
 
 		<br>
 
