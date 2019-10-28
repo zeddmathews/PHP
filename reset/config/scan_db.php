@@ -6,8 +6,9 @@
 		$connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 		$search = $connection->prepare("SELECT * FROM users WHERE id = 1");
 		$search->execute();
-		$user = $search->fetchAll();
-		echo $user;
+		$user = $search->fetch();
+		foreach ($user as $bit)
+			echo $bit;
 	}
 	catch (PDOException $e)
 	{
