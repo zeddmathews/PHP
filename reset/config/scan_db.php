@@ -1,24 +1,27 @@
 <?php
-	include('./database.php');
-	try
-	{
-		$connection = new PDO("$DB_CON", $DB_USER, $DB_PASSWORD);
+	require('database.php');
+	try {
+		$username = $_POST['username'];
+		$password = $_POST['password'];
+		// $email = $_POST['username'];
+		$connection = new PDO($DB_CON, $DB_USER, $DB_PASSWORD);
 		$connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-		$search = $connection->prepare("SELECT * FROM users WHERE id = 1");
+		$query = "SELECT * FROM users WHERE username = :username AND password = :password";
+		$search = $connection->prepare($query);
+		$search->bindParam(':username', $username);
+		$search->bindParam(':password', $password);
 		$search->execute();
-		$user = $search->fetch();
-		foreach ($user as $bit)
-			echo $bit;
+		$count = $search->rowCount();
+		if ($count > 0) {
+			$_SESSION["username"] = $username;
+			header("Location: ../back-end/register.php");
+		}
+		else {
+			echo "Wrong stuffses";
+		}
 	}
-	catch (PDOException $e)
-	{
+	catch (PDOException $e) {
 		echo "It Dun Fucked up: ".$e->getMessage();
 	}
-// 	if ($search->execute(array($_POST['username']))) {
-// 	$data = $search->fetchAll(PDO::FETCH_ASSOC);
-// 	$firstRow = $data[0];
-// 	if (password_verify($_POST['login_pswd'], $firstRow['password'])) {
-// 		$_SESSION['UserId'] = $data[0]['UserId'];
-//     }
-// }
+	$connection = null;
 ?>

@@ -1,9 +1,7 @@
-<?php
-	include('../config/scan_db.php');
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<link href="https://fonts.googleapis.com/css?family=Titillium+Web&display=swap" rel="stylesheet">
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -11,24 +9,25 @@
 	<title>Camagru</title>
 </head>
 <body>
-	<form>
+	<form class="login" action="../config/scan_db.php" method="post">
 		<label>Username/E-mail</label>
-		<input type="text" name="login" required>
+		<br>
+		<input type="text" name="username" required>
 
 		<br>
 
 		<label>Password</label>
-		<input type="password" name="login_pswd" required>
-
 		<br>
-
-		<button type="submit" name="Login">Login</button>
+		<input type="password" name="password" required>
+		<br>
+		<button class="login_btn" type="submit" name="Login">Login</button>
 		
 		<br>
 
 		<label>Need an account?</label>
-		<button type="button"><a href="./register.html">Register</a></button>
-		<button type="button"><a href="./reset_account.html">Forgotten password?</a></button>
+		<br>
+		<button type="button"><a href="./register.php">Register</a></button>
+		<button type="button"><a href="./reset_account.php">Forgotten password?</a></button>
 	</form>
 </body>
 </html>

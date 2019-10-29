@@ -1,9 +1,9 @@
 <?php
-	include('./database.php');
+	require('database.php');
 	session_start();
 	try {
 		$sql = "CREATE DATABASE IF NOT EXISTS $DB_NAME";
-		$connection = new PDO("$DB_DSN", $DB_USER, $DB_PASSWORD) or die("Could not connect X_X");
+		$connection = new PDO($DB_DSN, $DB_USER, $DB_PASSWORD) or die("Could not connect X_X");
 		$connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 		$connection->exec($sql);
 		echo "Database created successfully<br>";
@@ -26,7 +26,7 @@
 			notifications BOOLEAN NOT NULL
 			)";
 		echo "Table created successfully<br>";
-		// header("../back-end/register.php");
+		header("Location: ../back-end/register.php");
 		$connection->exec($sql);
 	}
 	catch(PDOException $e) {

@@ -2,13 +2,15 @@
 	ini_set('display_error', 1);
 	ini_set('display_startup_errors', 1);
 	error_reporting(E_ALL);
-	include('database.php');
+	require('database.php');
 	session_start();
 	try {
 		$connection = new PDO($DB_CON, $DB_USER, $DB_PASSWORD) or die("Could not connect X.X");
 		$connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-		if ($_POST['password_1'] != $_POST['password_2'])
+		if ($_POST['password_1'] != $_POST['password_2']) {
 			die("Passwords do not match");
+		}
+		// $edit = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
 		if (filter_var($_POST[email], FILTER_VALIDATE_EMAIL)) {
 			echo ("$_POST[email] is a valid email address");
 		}
