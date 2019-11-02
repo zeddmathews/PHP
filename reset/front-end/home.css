@@ -1,11 +1,16 @@
+html {
+	margin: 0;
+	padding: 0;
+	height: 100vh;
+}
+
 a {
 	text-decoration: none;
 	color: #000;
 }
 body {
+	width: 100vw;
 	font-family: Titillium Web;
-	margin: 0;
-	height: 100vh;
 	background: #092756;
 	background: -moz-radial-gradient(0% 100%, ellipse cover, rgba(111, 0, 255, 0.4) 10%,rgba(138,114,76,0) 40%),-moz-linear-gradient(top,  rgba(57,173,219,.25) 0%, rgba(42,60,87,.4) 100%), -moz-linear-gradient(-45deg,  #d80041 0%, #6935e2 100%);
 	background: -webkit-radial-gradient(0% 100%, ellipse cover, rgba(111, 0, 255, 0.4) 10%,rgba(138,114,76,0) 40%), -webkit-linear-gradient(top,  rgba(57,173,219,.25) 0%,rgba(42,60,87,.4) 100%), -webkit-linear-gradient(-45deg,  #d80041 0%,#6935e2 100%);
@@ -45,10 +50,21 @@ body {
 }
 
 .wordmark {
-	
+	display: block;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+.wordmark.margin {
+	margin: 22px auto 12px;
+}
+
+.form {
+	margin-bottom: 20px;
 }
 
 div {
+	-webkit-box-align: stretch;
 	align-items: stretch;
 	border: 0 solid #000;
 	box-sizing: border-box;
@@ -62,10 +78,20 @@ div {
 	position: relative;
 }
 
-div {
+div, h1, h2 {
 	margin: 0;
 	padding: 0;
 	border: 0;
 	font: inherit;
 	vertical-align: baseline;
+}
+
+h1 {
+	display: block;
+	font-size: 2em;
+	margin-block-start: 0.67em;
+	margin-block-end: 0.67em;
+	margin-inline-start: 0px;
+	margin-inline-end: 0px;
+	font-weight: bold;
 }

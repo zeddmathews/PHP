@@ -1,0 +1,22 @@
+// 1. Create db
+
+2. Create table
+	-users (edit verified if true)
+	-verified
+
+3. Insert data
+	-register (redirect)
+	-email verification (token)
+
+4. Scan data
+	-find user/email
+	-find hashed password
+
+5. Logout
+	-all pages
+
+6. Guest account
+	-browsing only
+
+7. Index
+	-redirect to this after creation

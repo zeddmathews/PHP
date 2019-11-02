@@ -28,6 +28,7 @@
 		<br>
 		<button type="button"><a href="./register.php">Register</a></button>
 		<button type="button"><a href="./reset_account.php">Forgotten password?</a></button>
+		<button type="button"><a href="./logout.php">Logout</a></button>
 	</form>
 </body>
 </html>

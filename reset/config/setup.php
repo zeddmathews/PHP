@@ -20,7 +20,6 @@
 			lastname VARCHAR(100) NOT NULL,
 			username VARCHAR(100) NOT NULL,
 			email VARCHAR(100) NOT NULL,
-			password VARCHAR(100) NOT NULL,
 			encrypt VARCHAR(200) NOT NULL,
 			verified BOOLEAN NOT NULL,
 			notifications BOOLEAN NOT NULL

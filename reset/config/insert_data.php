@@ -17,12 +17,13 @@
 		else {
 			die ("$_POST[email] is not a valid email address");
 		}
-		$encrypt = md5($_POST['password1']);
-		$sql = "INSERT INTO users(firstname, lastname, username, email, password, encrypt, verified, notifications) VALUES ('{$_POST[firstname]}', '{$_POST[lastname]}', '{$_POST[username]}', '{$_POST[email]}', '{$_POST[password_1]}', '$encrypt', false, false)";
+		$encrypt = password_hash($_POST['password1'], PASSWORD_BCRYPT);
+		$sql = "INSERT INTO users(firstname, lastname, username, email, encrypt, verified, notifications) VALUES ('{$_POST[firstname]}', '{$_POST[lastname]}', '{$_POST[username]}', '{$_POST[email]}', '$encrypt', false, false)";
 		$msg = "Please click the following link to activate your account";
 		mail("{$_POST[email]}", Confirmation, $msg);
 		$connection->exec($sql);
-		echo "An email with a verification link has been sent to you.";
+		echo "<br> An email with a verification link has been sent to you.";
+		header("Location: ../back-end/home.php");
 	}
 	catch (PDOException $e) {
 		echo $sql . "<br>" . $e->getMessage();

@@ -12,7 +12,7 @@
 <body>
 	<div class="main">
 		<div class="article">
-			<h1 class="wordmark"><h1>
+			<h1 class="wordmark margin">Camagru</h1>
 			<div class="form">
 				<form class="register-form" action="../config/insert_data.php" method="post">
 					<h2 class="register-reason">Sign up to see photos and videos from your friends<h2>
