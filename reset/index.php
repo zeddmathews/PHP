@@ -5,12 +5,12 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<link rel="stylesheet" href="../front-end/home.css">
+	<link rel="stylesheet" href="./front-end/home.css">
 	<title>Camagru</title>
 </head>
 <body>
 	<form class="login" action="../config/scan_db.php" method="post">
-		<label>Username/E-mail</label>
+		<label>Username</label>
 		<br>
 		<input type="text" name="username" required>
 

@@ -10,7 +10,7 @@
 </head>
 
 <body>
-	<div class="main">
+	<!-- <div class="main">
 		<div class="article">
 			<h1 class="wordmark margin">Camagru</h1>
 			<div class="form">
@@ -54,7 +54,7 @@
 				</form>
 			</div>
 		</div>
-	</div>
+	</div> -->
 
 	<form class="register-form" action="../config/insert_data.php" method="post">
 		<label>Name</label>
@@ -98,7 +98,7 @@
 		<br>
 
 		<label>Already have an account?</label>
-		<button type="button"><a href="./home.php">Login</a></button>
+		<button type="button"><a href="../index.php">Login</a></button>
 		<button type="button"><a href="./reset_account.php">Forgotten password?</a></button>
 	</form>
 </body>

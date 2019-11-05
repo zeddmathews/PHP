@@ -8,7 +8,7 @@
 	else {
 		echo "Dafuq";
 	}
-	header("Location: home.php");
+	header("Location: ../index.php");
 ?>
 
 <!DOCTYPE html>

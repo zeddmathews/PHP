@@ -1,15 +1,15 @@
 <?php
+	session_start();
 	require('../config/database.php');
+	require('../config/connection.php');
+
+	// get token from email url
+	$email = $_GET['email'];
+	$token = $_GET['token'];
+	if ($email == $_SESSION['email'] && $token == $_SESSION['token']) {
+		$update = "UPDATE users SET verified=0 WHERE token=:token";
+		$stmt = $connection->prepare($update);
+		
+		echo 'You have successfully registered your account';
+	}
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Account created</title>
-</head>
-<body>
-	
-</body>
-</html>
