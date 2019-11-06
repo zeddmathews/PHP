@@ -11,6 +11,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Feed</title>
+	<link rel="stylesheet" href="../bulma.min.css">
 </head>
 <body>
 	<h1>Feed</h1>

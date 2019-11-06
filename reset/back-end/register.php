@@ -5,57 +5,71 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<link rel="stylesheet" href="../front-end/home.css">
 	<title>Register</title>
+	<link rel="stylesheet" href="../bulma.min.css">
 </head>
 
 <body>
-	<!-- <div class="main">
-		<div class="article">
-			<h1 class="wordmark margin">Camagru</h1>
-			<div class="form">
-				<form class="register-form" action="../config/insert_data.php" method="post">
-					<h2 class="register-reason">Sign up to see photos and videos from your friends<h2>
-					<div class="data">
-						<div class="data2">
-							<input class="data3" placeholder="Email" type="text">
-						</div>
-					</div>
-					<div class="data">
-						<div class="data2">
-							<input class="data3" placeholder="First Name" type="text">
-						</div>
-					</div>
-					<div class="data">
-						<div class="data2">
-							<input class="data3" placeholder="Surname" type="text">
-						</div>
-					</div>
-					<div class="data">
-						<div class="data2">
-							<input class="data3" placeholder="Username" type="text">
-						</div>
-					</div>
-					<div class="data">
-						<div class="data2">
-							<input class="data3" placeholder="Password" type="password">
-						</div>
-					</div>
-					<div class="data">
-						<div class="data2">
-							<input class="data3" placeholder="Re-Password" type="password">
-						</div>
-					</div>
-					<div>
-						<div class="">
-							<button class="">Sign up</button>
-						</div>
-					</div>
-				</form>
-			</div>
-		</div>
-	</div> -->
+	<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="https://bulma.io">
+      <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
+    </a>
 
+    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="navbarBasicExample" class="navbar-menu">
+    <div class="navbar-start">
+      <a class="navbar-item">
+        Home
+      </a>
+
+      <a class="navbar-item">
+        Documentation
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          More
+        </a>
+
+        <div class="navbar-dropdown">
+          <a class="navbar-item">
+            About
+          </a>
+          <a class="navbar-item">
+            Jobs
+          </a>
+          <a class="navbar-item">
+            Contact
+          </a>
+          <hr class="navbar-divider">
+          <a class="navbar-item">
+            Report an issue
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="navbar-end">
+      <div class="navbar-item">
+        <div class="buttons">
+          <a class="button is-primary">
+            <strong>Sign up</strong>
+          </a>
+          <a class="button is-light">
+            Log in
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
 	<form class="register-form" action="../config/insert_data.php" method="post">
 		<label>Name</label>
 		<br>
@@ -101,6 +115,34 @@
 		<button type="button"><a href="../index.php">Login</a></button>
 		<button type="button"><a href="./reset_account.php">Forgotten password?</a></button>
 	</form>
+
+	<script>
+		document.addEventListener('DOMContentLoaded', () => {
+
+		// Get all "navbar-burger" elements
+		const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+		// Check if there are any navbar burgers
+		if ($navbarBurgers.length > 0) {
+
+		// Add a click event on each of them
+		$navbarBurgers.forEach( el => {
+			el.addEventListener('click', () => {
+
+			// Get the target from the "data-target" attribute
+			const target = el.dataset.target;
+			const $target = document.getElementById(target);
+
+			// Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+			el.classList.toggle('is-active');
+			$target.classList.toggle('is-active');
+
+			});
+		});
+		}
+
+		});
+	</script>
 </body>
 
 </html>
