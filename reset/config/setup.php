@@ -27,7 +27,7 @@
 			token VARCHAR(100) NOT NULL UNIQUE
 			)";
 		echo "Table created successfully<br>";
-		header("Location: ../back-end/register.php");
+		header("Location: ../back-end/home.php");
 		$connection->exec($sql);
 	}
 	catch(PDOException $e) {

@@ -15,8 +15,6 @@
 		$firsty = trim(htmlspecialchars($_POST['firstname']));
 		$lasty = trim(htmlspecialchars($_POST['lastname']));
 		$usery = trim(htmlspecialchars($_POST['username']));
-		
-		$count = rowCount();
 
 		$upp = preg_match('@[A-Z]@', $password1);
 		$low = preg_match('@[a-z]@', $password1);

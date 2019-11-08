@@ -6,21 +6,25 @@
 		$username = $_POST['username'];
 		$encrypt = $_POST['password'];
 		// $email = $_POST['username'];
-		// $connection = new PDO($DB_CON, $DB_USER, $DB_PASSWORD);
-		// $connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-		$query = "SELECT * FROM users WHERE username = :username AND encrypt = :encrypt";
-		$search = $connection->prepare($query);
-		$search->bindParam(':username', $username);
-		$search->bindParam(':encrypt', $encrypt);
-		$search->execute();
-		$count = $search->rowCount(); //preg_match
-		if ($count > 0) {
-			$_SESSION["username"] = $username;
-			header("Location: ../back-end/register.php");
+		$query = $connection->prepare("SELECT encrypt FROM users WHERE username = :username");
+		// $search = $connection->prepare($query);
+		$query->bindParam(':username', $username);
+		// $search->bindParam(':email', $email);
+		// $search->bindParam(':encrypt', $encrypt);
+		$query->execute(array($username));
+		if (password_verify($encrypt, fetchColumn()))
+		{
+			$count = $search->rowCount(); //preg_match
+			if ($count > 0) {
+				$_SESSION["username"] = $username;
+				header("Location: ../back-end/home.php");
+			}
+			else {
+				echo "Wrong stuffses";
+			}
 		}
-		else {
-			echo "Wrong stuffses";
-		}
+		else
+			echo "No works";
 	}
 	catch (PDOException $e) {
 		echo "It Dun Fucked up: ".$e->getMessage();

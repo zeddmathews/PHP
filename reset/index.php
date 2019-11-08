@@ -9,7 +9,7 @@
 	<title>Camagru</title>
 </head>
 <body>
-	<form class="login" action="../config/scan_db.php" method="post">
+	<form class="login" action="./config/scan_db.php" method="post">
 		<label>Username</label>
 		<br>
 		<input type="text" name="username" required>
@@ -26,9 +26,9 @@
 
 		<label>Need an account?</label>
 		<br>
-		<button type="button"><a href="./register.php">Register</a></button>
-		<button type="button"><a href="./reset_account.php">Forgotten password?</a></button>
-		<button type="button"><a href="./logout.php">Logout</a></button>
+		<button type="button"><a href="../back-end/home.php">Register</a></button>
+		<button type="button"><a href="../back-end/reset_account.php">Forgotten password?</a></button>
+		<button type="button"><a href="../back-end/logout.php">Logout</a></button>
 	</form>
 </body>
 </html>
