@@ -17,7 +17,7 @@
 	// Build Table 'Users'
 	try {
 		require_once('../dev/pdo_connection.php');
-		$sql = "CREATE TABLE IF NOT EXISTS Users (
+		$sql = "CREATE TABLE IF NOT EXISTS users (
 			id INT(11) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
 			firstname VARCHAR(100) NOT NULL,
 			lastname VARCHAR(100) NOT NULL,
@@ -28,6 +28,7 @@
 			notifications BOOLEAN NOT NULL,
 			token VARCHAR(100) NOT NULL UNIQUE
 		)";
+		$conn->exec($sql);
 		echo "More shit functions<br>";
 	}
 	catch (PDOException $e){
@@ -37,13 +38,17 @@
 	// Build table 'Images'
 	try {
 		require_once('../dev/pdo_connection.php');
-		$sql = "CREATE TABLE IF NOT EXISTS Images (
+		$sql = "CREATE TABLE IF NOT EXISTS images (
 			id INT(11) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
 			imagename VARCHAR(200) NOT NULL,
+			created VARCHAR(200) NOT NULL
 		)";
+		$conn->exec($sql);
+		echo "Extremely functional shit";
 	}
 	catch (PDOException $e){
 		echo $sql ."<br>". $e->getMessage();
 	}
 	
+	header("Location: ../index.php");
 ?>

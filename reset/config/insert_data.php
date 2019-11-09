@@ -7,8 +7,6 @@
 	require('connection.php');
 	
 	try {
-		// $connection = new PDO($DB_CON, $DB_USER, $DB_PASSWORD) or die("Could not connect X.X");
-		// $connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 		$password1 = trim(htmlspecialchars($_POST['password_1']));
 		$password2 = trim(htmlspecialchars($_POST['password_2']));
 		$lemail = trim(htmlspecialchars($_POST['email']));
