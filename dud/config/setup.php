@@ -49,6 +49,6 @@
 	catch (PDOException $e){
 		echo $sql ."<br>". $e->getMessage();
 	}
-	
+	$conn = null;
 	header("Location: ../index.php");
 ?>
