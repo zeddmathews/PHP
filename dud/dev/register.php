@@ -59,6 +59,7 @@
 			mail($lemail, 'Confirmation', $msg);
 			echo "<br> An email with a verification link has been sent to you.";
 			$stmt->execute();
+			header("Location:");
 
 		}
 		catch (PDOException $e){
