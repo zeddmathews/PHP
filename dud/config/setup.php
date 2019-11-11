@@ -30,6 +30,7 @@
 		)";
 		$conn->exec($sql);
 		echo "More shit functions<br>";
+		$conn = null;
 	}
 	catch (PDOException $e){
 		echo $sql ."<br>". $e->getMessage();
@@ -45,10 +46,11 @@
 		)";
 		$conn->exec($sql);
 		echo "Extremely functional shit";
+		$conn = null;
 	}
 	catch (PDOException $e){
 		echo $sql ."<br>". $e->getMessage();
 	}
-	$conn = null;
+	
 	header("Location: ../index.php");
 ?>

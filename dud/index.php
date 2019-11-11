@@ -71,7 +71,7 @@
 </nav>
 	<h1>Welcome to Camagru</h1>
 		<button type="button"><a href="./user/php/register.php">Register</a></button>
-		<button type="button"><a href="./user/php">Login</a></button>
+		<button type="button"><a href="./user/php/login.php">Login</a></button>
 		<button type="button"><a href="./user/php/feed.php">Feed</a></button>
 </body>
 </html>
