@@ -52,7 +52,7 @@
 			$stmt->bindParam(':lemail', $lemail);
 			$stmt->bindParam(':encrypt', $encrypt);
 			$stmt->bindParam(':token', $token);
-			$msg = 'Please click the following link to activate your account: http://localhost:8080/php/dud/user/php/verify.php?email='.$lemail.'token='.$token;
+			$msg = 'Please click the following link to activate your account: http://localhost:8080/php/dud/user/php/verify.php?email='.$lemail.'?token='.$token;
 			$_SESSION['email'] = $lemail;
 			$_SESSION['token'] = $token;
 			mail($lemail, 'Confirmation', $msg);

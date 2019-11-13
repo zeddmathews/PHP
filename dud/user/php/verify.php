@@ -1,19 +1,30 @@
 <?php
 	session_start();
-	require('../../config/database.php');
 	require('../../dev/pdo_connection.php');
 
-	$email = $_GET['email'];
-	$token = $_GET['token'];
-	// password_verify($token, $_SESSION['token']);
-	if ($email == $_SESSION['email'] && $token == $_SESSION['token']) {
-		$update = "UPDATE users SET verified=0 WHERE token=:token";
-		$stmt = $conn->prepare($update);
-		$stmt->bindParam(':token', $token);
-		$stmt->execute();
-		echo 'You have successfully registered your account';
+	try {
+		$token = $_GET['token'];
+		$match = $conn->prepare("SELECT verified FROM users where token = ?");
+		$match->execute(array($match));
+		if ($match->fetchColumn() === 1) {
+			echo 'Your account has already been verified';
+		}
+		else {
+			$update = "UPDATE users SET verified=1 WHERE token=:token";
+			$stmt = $conn->prepare($update);
+			$stmt->bindParam(':token', $token);
+			$stmt->execute();
+			$match = $conn->prepare("SELECT verified FROM users where token = ?");
+			$match->execute(array($match));
+			if ($match->fetchColumn === 1) {
+				echo'Account verified';
+			}
+			else {
+				echo 'Oops';
+			}
+		}
 	}
-	else {
-		echo 'Be better';
+	catch(PDOException $e) {
+		echo 'Error: <br>'. $e->getMessage(); 
 	}
 ?>
