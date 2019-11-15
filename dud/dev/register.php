@@ -39,6 +39,12 @@
 	if ($password1 != $password2) {
 		echo 'Passwords do not match<br>';
 	}
+	try {
+		//
+	}
+	catch (PDOException $e){
+		echo 'You dun fucked up:'. $e->getMessage();
+	}
 	if ($password1 == $password2) {
 		try {
 			$encrypt = password_hash($password1, PASSWORD_BCRYPT);
