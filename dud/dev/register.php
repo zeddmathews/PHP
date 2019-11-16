@@ -1,5 +1,5 @@
 <?php
-	require('../config/database.php');
+	// require('../config/database.php');
 	require('./pdo_connection.php');
 
 	$password1 = trim(htmlspecialchars($_POST['password_1']));
@@ -9,38 +9,38 @@
 	$lasty = trim(htmlspecialchars($_POST['lastname']));
 	$usery = trim(htmlspecialchars($_POST['username']));
 
-	$upp = preg_match('@[A-Z]@', $password1);
-	$low = preg_match('@[a-z]@', $password1);
-	$num = preg_match('@[0-9]@', $password1);
-	$spec = preg_match('@[^\w]@', $password1);
+	// $upp = preg_match('@[A-Z]@', $password1);
+	// $low = preg_match('@[a-z]@', $password1);
+	// $num = preg_match('@[0-9]@', $password1);
+	// $spec = preg_match('@[^\w]@', $password1);
 
-	if (!$upp) {
-		echo 'No uppercase letters<br>';
-	}
-	if (!$low) {
-		echo 'No lowercase letters<br>';
-	}
-	if (!$num) {
-		echo 'No numbers<br>';
-	}
-	if (!$spec) {
-		echo 'No special characters<br>';
-	}
-	if (strlen($password1) < 8) {
-		echo 'Password too short<br>';
-	}
-	if (!$upp || !$low || !$num || !$spec || strlen($password1) < 8) {
-		echo 'Password shoulbe be at least 8 characters in length and should include
-		at least one upper case letter, one lower case letter, one number, and one special character.<br>';
-	}
-	else {
-		echo 'Meh password<br>';
-	}
+	// if (!$upp) {
+	// 	echo 'No uppercase letters<br>';
+	// }
+	// if (!$low) {
+	// 	echo 'No lowercase letters<br>';
+	// }
+	// if (!$num) {
+	// 	echo 'No numbers<br>';
+	// }
+	// if (!$spec) {
+	// 	echo 'No special characters<br>';
+	// }
+	// if (strlen($password1) < 8) {
+	// 	echo 'Password too short<br>';
+	// }
+	// if (!$upp || !$low || !$num || !$spec || strlen($password1) < 8) {
+	// 	echo 'Password shoulbe be at least 8 characters in length and should include
+	// 	at least one upper case letter, one lower case letter, one number, and one special character.<br>';
+	// }
+	// else {
+	// 	echo 'Meh password<br>';
+	// }
 	if ($password1 != $password2) {
 		echo 'Passwords do not match<br>';
 	}
 	try {
-		//
+		// Matching user to avoid duplicates
 	}
 	catch (PDOException $e){
 		echo 'You dun fucked up:'. $e->getMessage();

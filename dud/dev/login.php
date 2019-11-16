@@ -1,5 +1,14 @@
 <?php
-	require('../config/database.php');
+	require('./pdo_connection.php');
 
-	
+	$lemail = trim(htmlspecialchars($_POST['email']));
+	$password = trim(htmlspecialchars($_POST['password']));
+	try {
+		$stmt = $conn->prepare("SELECT username FROM users WHERE email = :lemail");
+		$stmt->bindParam(':lemail', $lemail);
+		
+	}
+	catch (PDOException $e) {
+		echo 'Nice'. $e->getMessage;
+	}
 ?>

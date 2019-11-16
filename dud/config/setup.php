@@ -47,7 +47,7 @@
 		$token = md5($usery);
 		$encrypt = password_hash($password, PASSWORD_BCRYPT);
 		$sql = "INSERT INTO users(firstname, lastname, username, email, encrypt, verified, notifications, token)
-		VALUES (:firsty, :lasty, :usery, :lemail, :encrypt, true, true, :token)";
+		VALUES (:firsty, :lasty, :usery, :lemail, :encrypt, 1, 1, :token)";
 		$stmt = $conn->prepare($sql);
 		$stmt->bindParam(':firsty', $firsty);
 		$stmt->bindParam(':lasty', $lasty);
