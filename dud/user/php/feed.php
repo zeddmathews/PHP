@@ -12,9 +12,12 @@
 	<script src="../../dev/js/camera.js"></script>
 	<title>Feed</title>
 </head>
-<body>
+<body onload="init();">
 	<h3>Display (preferably) pretty shit</h3>
-	<button onclick="startCam();">Take new photo</button>
+	<button onclick="startCam();">Start</button>
+	<button onclick="stopCam();">Stop</button>
+	<button onclick="takeSnap();">Capture</button>
+	<canvas id="myCanvas" width="300" height="300"></canvas>
 	
 </body>
 </html>

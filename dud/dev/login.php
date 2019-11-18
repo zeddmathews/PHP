@@ -6,7 +6,9 @@
 	try {
 		$stmt = $conn->prepare("SELECT username FROM users WHERE email = :lemail");
 		$stmt->bindParam(':lemail', $lemail);
-		
+		$stmt->execute();
+		echo 'Probably worked';
+		header("Location: ../user/php/feed.php");
 	}
 	catch (PDOException $e) {
 		echo 'Nice'. $e->getMessage;
