@@ -1,6 +1,5 @@
 <?php
-	require('../config/database.php');
-	require('./pdo_connection.php');
+	require('../config/pdo_connection.php');
 
 	$password1 = trim(htmlspecialchars($_POST['password_1']));
 	$password2 = trim(htmlspecialchars($_POST['password_2']));
@@ -58,14 +57,10 @@
 			$stmt->bindParam(':lemail', $lemail);
 			$stmt->bindParam(':encrypt', $encrypt);
 			$stmt->bindParam(':token', $token);
-			$msg = 'Please click the following link to activate your account: http://localhost:8080/PHP/dud/dev/verify.php?email='.$lemail.'?token='.$token;
-			$_SESSION['email'] = $lemail;
-			$_SESSION['token'] = $token;
+			$msg = 'Please click the following link to activate your account: http://localhost:8080/kay/dud/dev/verify.php?email='.$lemail.'?token='.$token;
 			mail($lemail, 'Confirmation', $msg);
 			echo "<br> An email with a verification link has been sent to you.";
 			$stmt->execute();
-			// header("Location: /php/dud/php/login.php");
-
 		}
 		catch (PDOException $e){
 			echo $sql ."<br>". $e->getMessage();
@@ -74,5 +69,6 @@
 	else {
 		echo 'Can shit just function?';
 	}
+	header("Location: ../user/php/verify.php");
 	$conn = null;
 ?>

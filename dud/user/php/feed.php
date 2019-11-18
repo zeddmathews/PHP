@@ -1,7 +1,3 @@
-<?php
-	//gallery
-	require('../../config/database.php');
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,6 +14,6 @@
 	<button onclick="stopCam();">Stop</button>
 	<button onclick="takeSnap();">Capture</button>
 	<canvas id="myCanvas" width="300" height="300"></canvas>
-	
+
 </body>
 </html>

@@ -8,6 +8,6 @@
 </head>
 <body>
 	<h3>An email with a verification link has been sent to you.</h3>
-	<button><a>Login</a></button>
+	<button><a href="./login.php">Login</a></button>
 </body>
 </html>

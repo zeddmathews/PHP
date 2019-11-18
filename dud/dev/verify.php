@@ -1,31 +1,30 @@
 <?php
-	// session_start();
-	// require('../config/database.php');
-	require('./pdo_connection.php');
+	session_start();
+	require('../config/pdo_connection.php');
 
 	try {
 		$token = $_GET['token'];
-		$match = $conn->prepare("SELECT verified FROM users where token = ?");
-		$match->execute(array($match));
-		if ($match->fetchColumn() === 1) {
-			echo 'Your account has already been verified';
+		$stmt = $conn->prepare("SELECT verified FROM users WHERE token = ?");
+		$stmt->execute(array($token));
+		if ($stmt->fetchColumn() === 1) {
+			echo 'Already verified';
 		}
 		else {
-			$update = "UPDATE users SET verified=1 WHERE token=:token";
-			$stmt = $conn->prepare($update);
-			$stmt->bindParam(':token', $token);
-			$stmt->execute();
-			$match = $conn->prepare("SELECT verified FROM users where token = ?");
-			$match->execute(array($match));
-			if ($match->fetchColumn === 1) {
-				echo'Account verified';
+			$update = $conn->prepare("UPDATE users SET verified = 1 WHERE token = :token");
+			$update->bindParam(':token', $token);
+			$update->execute();
+			$stmt = $conn->prepare("SELECT verified FROM users WHERE token = ?");
+			$stmt->execute(array($token));
+			if ($stmt->fetchColumn() === 1) {
+				echo 'Nice';
+				header("Location: ../user/php/login.php");
 			}
 			else {
-				echo 'Oops';
+				echo 'You done fucked up';
 			}
 		}
 	}
 	catch(PDOException $e) {
-		echo 'Error: <br>'. $e->getMessage(); 
+		echo 'Well done'."<br>".'You caused this shit:'.$e->getMessage();
 	}
 ?>

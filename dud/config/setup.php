@@ -15,7 +15,7 @@
 		echo $sql ."<br>". $e->getMessage();
 	}
 
-	require('../dev/pdo_connection.php');
+	require('./pdo_connection.php');
 
 	// Build Table 'Users'
 	try {

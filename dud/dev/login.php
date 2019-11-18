@@ -1,5 +1,5 @@
 <?php
-	require('./pdo_connection.php');
+	require('../config/pdo_connection.php');
 
 	$lemail = trim(htmlspecialchars($_POST['email']));
 	$password = trim(htmlspecialchars($_POST['password']));

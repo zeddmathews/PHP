@@ -1,7 +1,3 @@
-<?php
-	// require('../../config/database.php');
-	// require('../../dev/login.php');
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
