@@ -1,5 +1,5 @@
 <?php
-	
+
 ?>
 
 <!DOCTYPE html>
@@ -46,12 +46,18 @@
 				<input id="reg-p2" name="reg-p2" placeholder="Confirm Password" type="password" required>
 
 				<a href="javascript:%20if_empty()" id="submit">Register</a>
+
+				<hr>
+
+				
 			</form>
 		</div>
 	</div>
 	<div id="pop">
 		<div id="popupLogin">
 			<form action="#" id="login-form" method="post" name="login-form">
+				<h2>Login to your account</h2>
+
 				<img id="close" src="./user/resources/close_button.png" onclick="hide_log()">
 
 				<hr>
@@ -63,6 +69,9 @@
 				<input id="login-password" name="password" placeholder="Password" type="password" required>
 
 				<a href="javascript:%20if_empty()" id="submit">Login</a>
+
+				<hr>
+
 			</form>
 		</div>
 	</div>
