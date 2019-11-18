@@ -1,5 +1,5 @@
 <?php
-	// require('../config/database.php');
+	require('../config/database.php');
 	require('./pdo_connection.php');
 
 	$password1 = trim(htmlspecialchars($_POST['password_1']));
@@ -39,12 +39,12 @@
 	if ($password1 != $password2) {
 		echo 'Passwords do not match<br>';
 	}
-	try {
-		// Matching user to avoid duplicates
-	}
-	catch (PDOException $e){
-		echo 'You dun fucked up:'. $e->getMessage();
-	}
+	// try {
+	// 	// Matching user to avoid duplicates
+	// }
+	// catch (PDOException $e){
+	// 	echo 'You dun fucked up:'. $e->getMessage();
+	// }
 	if ($password1 == $password2) {
 		try {
 			$encrypt = password_hash($password1, PASSWORD_BCRYPT);
@@ -58,13 +58,13 @@
 			$stmt->bindParam(':lemail', $lemail);
 			$stmt->bindParam(':encrypt', $encrypt);
 			$stmt->bindParam(':token', $token);
-			$msg = 'Please click the following link to activate your account: http://localhost:8080/php/dud/user/php/verify.php?email='.$lemail.'?token='.$token;
+			$msg = 'Please click the following link to activate your account: http://localhost:8080/PHP/dud/dev/verify.php?email='.$lemail.'?token='.$token;
 			$_SESSION['email'] = $lemail;
 			$_SESSION['token'] = $token;
 			mail($lemail, 'Confirmation', $msg);
 			echo "<br> An email with a verification link has been sent to you.";
 			$stmt->execute();
-			header("Location: ");
+			// header("Location: /php/dud/php/login.php");
 
 		}
 		catch (PDOException $e){

@@ -1,30 +1,13 @@
-<?php
-	session_start();
-	require('../../dev/pdo_connection.php');
-
-	try {
-		$token = $_GET['token'];
-		$match = $conn->prepare("SELECT verified FROM users where token = ?");
-		$match->execute(array($match));
-		if ($match->fetchColumn() === 1) {
-			echo 'Your account has already been verified';
-		}
-		else {
-			$update = "UPDATE users SET verified=1 WHERE token=:token";
-			$stmt = $conn->prepare($update);
-			$stmt->bindParam(':token', $token);
-			$stmt->execute();
-			$match = $conn->prepare("SELECT verified FROM users where token = ?");
-			$match->execute(array($match));
-			if ($match->fetchColumn === 1) {
-				echo'Account verified';
-			}
-			else {
-				echo 'Oops';
-			}
-		}
-	}
-	catch(PDOException $e) {
-		echo 'Error: <br>'. $e->getMessage(); 
-	}
-?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+</head>
+<body>
+	<h3>An email with a verification link has been sent to you.</h3>
+	<button><a>Login</a></button>
+</body>
+</html>

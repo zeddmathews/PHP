@@ -1,7 +1,3 @@
-<?php
-	//register/login redirection
-	require('../../config/database.php');
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
