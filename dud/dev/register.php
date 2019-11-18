@@ -1,13 +1,12 @@
 <?php
 	// require('../config/database.php');
 	require('./pdo_connection.php');
-
-	$password1 = trim(htmlspecialchars($_POST['password_1']));
-	$password2 = trim(htmlspecialchars($_POST['password_2']));
-	$lemail = trim(htmlspecialchars($_POST['email']));
-	$firsty = trim(htmlspecialchars($_POST['firstname']));
-	$lasty = trim(htmlspecialchars($_POST['lastname']));
-	$usery = trim(htmlspecialchars($_POST['username']));
+	$password1 = trim(htmlspecialchars($_POST['reg-p1']));
+	$password2 = trim(htmlspecialchars($_POST['reg-p2']));
+	$lemail = trim(htmlspecialchars($_POST['reg-email']));
+	$firsty = trim(htmlspecialchars($_POST['reg-name']));
+	$lasty = trim(htmlspecialchars($_POST['reg-lname']));
+	$usery = trim(htmlspecialchars($_POST['reg-uname']));
 
 	// $upp = preg_match('@[A-Z]@', $password1);
 	// $low = preg_match('@[a-z]@', $password1);

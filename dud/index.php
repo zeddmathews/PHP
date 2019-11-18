@@ -31,7 +31,7 @@
 
 				<br>
 
-				<input id="reg-uname" name="reg-uname" placeholder="Password" type="password" required>
+				<input id="reg-uname" name="reg-uname" placeholder="Username" type="text" required>
 
 				<br>
 
@@ -45,7 +45,7 @@
 
 				<input id="reg-p2" name="reg-p2" placeholder="Confirm Password" type="password" required>
 
-				<a href="javascript:%20if_empty()" id="submit">Register</a>
+				<a id="submit">Register</a>
 
 				<hr>
 
