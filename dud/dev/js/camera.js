@@ -25,7 +25,7 @@ function startCam() {
 // }) USEFUL STUFF FOR LATER
 
 // var req = new XMLHttpRequest();
-// req.addEventListener("laod", () => {
+// req.addEventListener("load", () => {
 // 	console.log(req.responseText);
 // })
 // req.open("GET", "urlthatilike.com");
@@ -47,4 +47,12 @@ function init() {
 
 function takeSnap() {
 	ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+}
+
+function saveSnap() {
+	let data = 'data='+document.getElementById("img_up").value;
+	let xhr = new XMLHttpRequest();
+	xhr.open('POST', '../upload_image.php',true);
+	xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+	xhr.send(data);
 }

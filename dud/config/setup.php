@@ -66,8 +66,7 @@
 		$sql = "CREATE TABLE IF NOT EXISTS images (
 			id INT(11) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
 			imagename VARCHAR(200) NOT NULL,
-			created VARCHAR(200) NOT NULL,
-			username VARCHAR(100) NOT NULL FOREIGN KEY REFERENCES users(username)
+			created VARCHAR(200) NOT NULL
 		)";
 		$conn->exec($sql);
 		echo "Extremely functional shit";
