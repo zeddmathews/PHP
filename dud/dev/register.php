@@ -57,7 +57,7 @@
 			$stmt->bindParam(':lemail', $lemail);
 			$stmt->bindParam(':encrypt', $encrypt);
 			$stmt->bindParam(':token', $token);
-			$msg = 'Please click the following link to activate your account: http://localhost:8080/kay/dud/dev/verify.php?email='.$lemail.'?token='.$token;
+			$msg = 'Please click the following link to activate your account: http://localhost:8080/kay/dud/dev/verify.php?email='.$lemail.'&token='.$token;
 			mail($lemail, 'Confirmation', $msg);
 			echo "<br> An email with a verification link has been sent to you.";
 			$stmt->execute();

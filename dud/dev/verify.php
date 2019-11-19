@@ -15,8 +15,8 @@
 			$update->execute();
 			$stmt = $conn->prepare("SELECT verified FROM users WHERE token = ?");
 			$stmt->execute(array($token));
-			if ($stmt->fetchColumn() === 1) {
-				echo 'Nice';
+			if ($stmt->fetchColumn() === "1") {
+				$_SESSION['loggedin'] = $_GET['email'];
 				header("Location: ../user/php/login.php");
 			}
 			else {
