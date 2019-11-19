@@ -10,6 +10,7 @@
 </head>
 <body onload="init();">
 	<h3>Display (preferably) pretty shit</h3>
+	<video autoplay = true id="video"></video>
 	<button onclick="startCam();">Start</button>
 	<button onclick="stopCam();">Stop</button>
 	<button onclick="takeSnap();">Capture</button>

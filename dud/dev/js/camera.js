@@ -1,38 +1,40 @@
-navigator.getUserMedia = ( 
-	navigator.getUserMedia ||
-	navigator.webkitGetUserMedia ||
-	navigator.mozGetUserMedia ||
-	navigator.msGetUserMedia);
-
-var video;
 var webcamStream;
 
 function startCam() {
-	if (navigator.getUserMedia) {
-		navigator.getUserMedia (
-			{
-				video: true,
-				audio: false
-			},
-
-			function(localMediaStream) {
-				video = document.querySelector('video');
-				video.src = window.URL.createObjectURL(localMediaStream);
-				webcamStream = localMediaStream;
-			},
-
-			function(err) {
+	if (navigator.mediaDevices.getUserMedia) {
+		navigator.mediaDevices.getUserMedia ({video: true,audio: false}
+		).then( function(localMediaStream) {
+			var video = document.querySelector("#video");
+			video.srcObject = localMediaStream;
+		}).catch( function(err) {
 				console.log("The following error occured: " + err);
 			}
 		);
 	}
 	else {
 	console.log("getUserMedia not supported");
-	}  
+	}
 }
 
+// // window.addEventListener("load", startCam);
+
+// $.ajax("urlthaticameupwith.com", {info: thoy}).then((res) => {
+
+// }).catch ((err) => {
+
+// }) USEFUL STUFF FOR LATER
+
+// var req = new XMLHttpRequest();
+// req.addEventListener("laod", () => {
+// 	console.log(req.responseText);
+// })
+// req.open("GET", "urlthatilike.com");
+// req.setRequestHeader("Content-Type", "application/JSON");
+
+// req.send("{info: stuff}");
+
 function stopCam() {
-	webcamStream.stop();
+	video.srcObject = null;
 }
 
 var canvas;
