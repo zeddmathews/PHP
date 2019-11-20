@@ -1,6 +1,9 @@
 <?php
 	require('../config/pdo_connection.php');
 
+	if(!(isset($_SESSION['logged_in']))) {
+		die ('You are not logged in');
+	}
 	try {
 		$upload_dir = "saved/";
 		$file = $upload_dir . basename($_FILES["img_up"]["name"]);
