@@ -2,7 +2,62 @@
 <h1>Signup</h1>
 <?php include('footer.php')?>
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Signup</title>
+</head>
+<body>
+	<form class="register-form" action="../../dev/register.php" method="post">
+		<label>Name</label>
+		<br>
+		<input type="text" name="firstname" required>
 
+		<br>
+
+		<label>Surname</label>
+		<br>
+		<input type="text" name="lastname" required>
+
+		<br>
+
+		<label>Username</label>
+		<br>
+		<input type="text" name="username" required>
+
+		<br>
+
+		<label>E-mail</label>
+		<br>
+		<input type="email" name="email" required>
+
+		<br>
+
+		<label>Password</label>
+		<br>
+		<input type="password" name="password_1" required>
+
+		<br>
+
+		<label>Confirm password</label>
+		<br>
+		<input type="password" name="password_2" required>
+
+		<br>
+		
+		<button type="submit" name="Register">Register</button>
+
+		<br>
+
+		<label>Already have an account?</label>
+		<button type="button"><a href="../../index.php">Login</a></button>
+		<button type="button"><a href="./reset_account.php">Forgotten password?</a></button>
+	</form>
+</body>
+</html>
 
 <?php
 require('config/pdo_connection.php');
